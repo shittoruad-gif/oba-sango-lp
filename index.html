@@ -31,6 +31,13 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,.maru{font-family:'Zen Maru Gothic',sans-serif;}
+/* 見出し・短いキャッチは単語の途中で折り返さない（文節/句読点でのみ改行）。
+   本文の長文は既定の禁則処理まかせにして、句読点が行頭に落ちるのを防ぐ。 */
+h1,h2,h3,.sec-head .lead,.hero .sub-copy,.empathy-msg,.cause-point,
+.catch,.line-guide-ttl,.line-guide ol li,.check-list li,.benefit-note,.qa-item summary{
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+}
 img{max-width:100%;}
 .inner{max-width:820px;margin:0 auto;padding:0 22px;}
 section{padding:72px 0;}
@@ -93,7 +100,7 @@ section{padding:72px 0;}
   border-radius:999px;padding:6px 20px;font-size:13.5px;font-weight:700;margin-bottom:22px;
   font-family:'Zen Maru Gothic',sans-serif;
 }
-.hero h1{font-size:clamp(26px,6.4vw,42px);font-weight:900;line-height:1.55;letter-spacing:.02em;}
+.hero h1{font-size:clamp(22px,5.6vw,40px);font-weight:900;line-height:1.6;letter-spacing:0;}
 .hero h1 .accent{color:var(--rose);}
 .hero h1 .marker{background:linear-gradient(transparent 62%,#f7d8dc 62%);}
 .hero .sub-copy{margin:22px auto 6px;font-size:clamp(14.5px,3.6vw,17px);font-weight:500;max-width:560px;}
@@ -372,7 +379,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       </h1>
       <p class="sub-copy">
         おおば整骨院・整体院の産後骨盤矯正は、<strong>女性施術者が担当</strong>。<br>
-        バキバキしない、からだにやさしい施術だから、産後のデリケートな身体でも安心してお受けいただけます。
+        バキバキしない、からだにやさしい施術だから、<br>産後のデリケートな身体でも、安心してお受けいただけます。
       </p>
       <figure class="ph ratio-16x9 hero-photo">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l2-3h8l2 3h3v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
@@ -417,12 +424,12 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <h2>出産後、こんなお悩みは<br>ありませんか？</h2>
     </div>
     <ul class="check-list">
-      <li><span class="mark">✓</span>産後から腰や股関節まわりが重だるく感じる</li>
-      <li><span class="mark">✓</span>骨盤まわりがゆるんだような、不安定な感じがある</li>
-      <li><span class="mark">✓</span>産前に履いていたズボンが入らなくなった</li>
-      <li><span class="mark">✓</span>骨盤がゆがんでいないか、開いたままになっていないか気になる</li>
-      <li><span class="mark">✓</span>抱っこや授乳で肩も腰もつらいのに、休む時間がない</li>
-      <li><span class="mark">✓</span>身体のことだけど、男性の先生には相談しづらい…</li>
+      <li><span class="mark">✓</span>産後から<wbr>腰や股関節まわりが<wbr>重だるく感じる</li>
+      <li><span class="mark">✓</span>骨盤まわりが<wbr>ゆるんだような、<wbr>不安定な感じがある</li>
+      <li><span class="mark">✓</span>産前に履いていた<wbr>ズボンが<wbr>入らなくなった</li>
+      <li><span class="mark">✓</span>骨盤のゆがみ・開きが<wbr>気になる</li>
+      <li><span class="mark">✓</span>抱っこや授乳で<wbr>肩も腰もつらいのに、<wbr>休む時間がない</li>
+      <li><span class="mark">✓</span>身体のことだけど、<wbr>男性の先生には<wbr>相談しづらい…</li>
     </ul>
     <p class="empathy-msg">
       ひとつでも当てはまったら、<br>
@@ -495,21 +502,21 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <div class="sol-step">
         <div class="num">1</div>
         <div>
-          <h3>からだにやさしい「ブロック矯正」で骨盤を整える</h3>
+          <h3>からだにやさしい<wbr>「ブロック矯正」で<wbr>骨盤を整える</h3>
           <p>バキバキ鳴らす矯正は行いません。専用のブロックを使い、<strong>身体の重みを利用してゆっくり骨盤を整える、からだにやさしい施術</strong>です。産後のデリケートな身体でも安心してお受けいただけます。</p>
         </div>
       </div>
       <div class="sol-step">
         <div class="num">2</div>
         <div>
-          <h3>「楽トレ」で骨盤まわりのインナーマッスルにアプローチ</h3>
+          <h3>「楽トレ」で<wbr>骨盤まわりの<wbr>インナーマッスルに<wbr>アプローチ</h3>
           <p>整えた骨盤を支えるために、寝たまま受けられる複合高周波EMS「楽トレ」でインナーマッスルと骨盤底筋にアプローチ。<strong>ゆるんだ骨盤まわりを支える力</strong>を、無理なく整えていきます。</p>
         </div>
       </div>
       <div class="sol-step">
         <div class="num">3</div>
         <div>
-          <h3>おひとりおひとりの状態に合わせた施術計画</h3>
+          <h3>おひとりおひとりの<wbr>状態に合わせた<wbr>施術計画</h3>
           <p>初回に骨盤の状態を丁寧にチェックし、お身体と生活リズムに合わせた通院計画をご提案します。<strong>わからないことはその場で何でも聞ける</strong>ので、不安なまま通い続けることはありません。</p>
         </div>
       </div>
@@ -675,11 +682,11 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <h2>よくあるご質問</h2>
     </div>
     <details class="qa-item" open>
-      <summary><span class="q-mark">Q</span>産後どのくらいから受けられますか？</summary>
+      <summary><span class="q-mark">Q</span>産後どのくらいから<wbr>受けられますか？</summary>
       <div class="qa-answer"><span class="a-mark">A</span><p>産後2ヶ月頃から受けていただけます。帝王切開の方や体調に不安のある方は、予約時にお気軽にご相談ください。</p></div>
     </details>
     <details class="qa-item">
-      <summary><span class="q-mark">Q</span>子どもを連れて行っても大丈夫ですか？</summary>
+      <summary><span class="q-mark">Q</span>子どもを連れて行っても<wbr>大丈夫ですか？</summary>
       <div class="qa-answer"><span class="a-mark">A</span><p>もちろん大丈夫です。キッズスペースと、待合室にはベビーベッドをご用意しています。完全予約制ですので、周りに気兼ねなくお子様とご一緒にお越しください。</p></div>
     </details>
     <details class="qa-item">
@@ -687,11 +694,11 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <div class="qa-answer"><span class="a-mark">A</span><p>強い痛みはありません。バキバキ鳴らす矯正ではなく、専用ブロックと身体の重みを利用したやさしい矯正です。産後のデリケートな身体でも安心して受けていただけます。感じ方には個人差がありますので、気になる点は施術中もお気軽にお伝えください。</p></div>
     </details>
     <details class="qa-item">
-      <summary><span class="q-mark">Q</span>女性の施術者にお願いできますか？</summary>
+      <summary><span class="q-mark">Q</span>女性の施術者に<wbr>お願いできますか？</summary>
       <div class="qa-answer"><span class="a-mark">A</span><p>はい。当院には女性施術者が在籍しており、産後骨盤矯正は基本的に女性施術者が担当いたしますので、安心してお越しください。※お身体の症状によっては、最適な施術のため男性施術者が担当させていただく場合がございます。</p></div>
     </details>
     <details class="qa-item">
-      <summary><span class="q-mark">Q</span>何回くらい通えばいいですか？</summary>
+      <summary><span class="q-mark">Q</span>何回くらい<wbr>通えばいいですか？</summary>
       <div class="qa-answer"><span class="a-mark">A</span><p>骨盤の状態や産後の経過月数によって異なりますので、初回のカウンセリングでお身体を確認したうえで、おひとりおひとりに合わせた通院計画をご提案します。無理な回数の押しつけは行いませんのでご安心ください。</p></div>
     </details>
     <details class="qa-item">
