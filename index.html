@@ -193,6 +193,24 @@ section{padding:72px 0;}
 .benefit-item p{font-size:13.5px;color:var(--brown-light);line-height:1.8;}
 .benefit-note{text-align:center;font-size:12px;color:var(--brown-light);margin-top:20px;}
 
+/* ===== staff(施術者紹介) ===== */
+.sec-staff{background:linear-gradient(180deg,#fdf1f2 0%,#fbf7f1 100%);}
+.staff-card{background:var(--white);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(107,86,72,.1);}
+.staff-photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+.staff-body{padding:30px 26px 34px;}
+.staff-role{font-size:12.5px;font-weight:700;color:var(--rose);letter-spacing:.1em;}
+.staff-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:24px;margin:6px 0 4px;}
+.staff-name .kana{font-size:13px;color:var(--brown-light);font-weight:500;margin-left:10px;letter-spacing:.06em;}
+.staff-tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px;}
+.staff-tags span{background:var(--rose-pale);color:var(--rose-dark);border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:700;}
+.staff-quote{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:clamp(16px,4vw,19px);line-height:1.8;color:var(--rose-dark);background:var(--rose-pale);border-radius:14px;padding:18px 20px;margin:0 0 18px;}
+.staff-body p{font-size:15px;line-height:1.9;color:var(--brown);}
+.staff-body p + p{margin-top:12px;}
+@media(min-width:720px){
+  .staff-card{display:grid;grid-template-columns:44% 56%;align-items:stretch;}
+  .staff-photo{height:100%;aspect-ratio:auto;}
+}
+
 /* ===== features(特徴) ===== */
 .sec-features{background:linear-gradient(180deg,#f9f3ea 0%,#fbf7f1 100%);}
 .feature{
@@ -224,6 +242,7 @@ section{padding:72px 0;}
 .ph.ratio-16x9{aspect-ratio:16/9;}
 .ph.ratio-4x3{aspect-ratio:4/3;}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ph.is-photo{border:none;padding:0;background:#efe7de;}
 .hero-photo{max-width:560px;margin:0 auto 28px;}
 .feature .ph{margin-top:18px;}
 .access-photo{margin-bottom:22px;}
@@ -352,14 +371,14 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 <body>
 
 <!--
-  ■ 画像差し替えメモ（class="ph" が5箇所のプレースホルダー）
-  写真が届いたら oba-sango-lp/images/ に保存し、各 <figure class="ph ..."> の中に
-  <img src="images/ファイル名.jpg" alt="説明"> を1行追加するだけで枠にフィット表示される。
-  1. ヒーロー           … 女性施術者の施術風景（横長 16:9）
-  2. 特徴01             … 女性施術者の単独写真（4:3）
-  3. 特徴02             … キッズスペース・ベビーベッド（4:3）
-  4. 特徴03             … 骨盤矯正・楽トレの施術風景（4:3）
-  5. アクセス           … 外観・入口（16:9）
+  ■ 掲載写真（2026-07-14 クライアント提供分を反映済み。images/ に保存）
+  1. ヒーロー   hero-shijutsu.jpg   … 女性施術者(池本)の施術風景（16:9）
+  2. 施術者紹介 ikemoto.jpg         … 池本久美波さん＋赤ちゃん
+  3. 特徴01     josei-shijutsu.jpg  … 女性施術者の施術（4:3）
+  4. 特徴02     kids-space.jpg      … キッズスペース・ベビーベッド（4:3）
+  5. 特徴03     kotsuban-shijutsu.jpg … 骨盤矯正の施術風景（4:3）
+  6. アクセス   gaikan.jpg          … 外観・駐車場（16:9）
+  差し替える場合は images/ の同名ファイルを置き換える。元の全42枚は Downloads/大庭先生/。
 -->
 
 <!-- ================= 1. ヘッドライン / ファーストビュー ================= -->
@@ -381,9 +400,8 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
         おおば整骨院・整体院の産後骨盤矯正は、<strong>女性施術者が担当</strong>。<br>
         バキバキしない、からだにやさしい施術だから、<br>産後のデリケートな身体でも、安心してお受けいただけます。
       </p>
-      <figure class="ph ratio-16x9 hero-photo">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l2-3h8l2 3h3v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span>写真：女性施術者による施術風景（後日差し替え）</span>
+      <figure class="ph ratio-16x9 hero-photo is-photo">
+        <img src="images/hero-shijutsu.jpg" alt="女性施術者による産後骨盤矯正の施術風景">
       </figure>
       <div class="hero-badges">
         <div class="hero-badge"><span class="small">基本は</span><span class="big">女性施術者<br>が担当</span></div>
@@ -587,19 +605,17 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <span class="f-label">理由 01</span>
       <h3><em>女性施術者が担当</em>だから、<br>デリケートな悩みも話しやすい</h3>
       <p>当院には女性の施術者が在籍しており、<strong>産後骨盤矯正は基本的に女性施術者が担当</strong>します。骨盤まわりのお悩みなど、男性には話しにくいことも気兼ねなくご相談ください。実際に、当院の患者様の<strong>70%以上が女性</strong>。明るく清潔な院内で、女性が通いやすい環境を整えています。</p>
-      <figure class="ph ratio-4x3">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l2-3h8l2 3h3v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span>写真：女性施術者（後日差し替え）</span>
+      <figure class="ph ratio-4x3 is-photo">
+        <img src="images/josei-shijutsu.jpg" alt="女性施術者による施術の様子">
       </figure>
     </div>
 
     <div class="feature">
       <span class="f-label">理由 02</span>
       <h3>キッズスペース・ベビーベッド完備。<br><em>赤ちゃん連れで来られます</em></h3>
-      <p>「子どもを預けられないから通えない」という心配は要りません。キッズスペースに加え、<strong>待合室にはベビーベッドも設置</strong>。完全予約制なので待ち時間も少なく、周りに気兼ねなくお子様と一緒にご来院いただけます。</p>
-      <figure class="ph ratio-4x3">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l2-3h8l2 3h3v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span>写真：キッズスペース・ベビーベッド（後日差し替え）</span>
+      <p>「子どもを預けられないから通えない」という心配は要りません。キッズスペースに加え、<strong>待合室にはベビーベッドも設置</strong>。<strong>院内はベビーカーのまま入れます</strong>ので、赤ちゃんと一緒でも安心。完全予約制で待ち時間も少なく、周りに気兼ねなくご来院いただけます。</p>
+      <figure class="ph ratio-4x3 is-photo">
+        <img src="images/kids-space.jpg" alt="キッズスペースとベビーベッド">
       </figure>
     </div>
 
@@ -607,16 +623,40 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <span class="f-label">理由 03</span>
       <h3>バキバキしない、<em>からだにやさしい矯正</em>。<br>産後2ヶ月から受けられます</h3>
       <p>施術は身体にやさしいブロック矯正。<strong>強い刺激のないソフトな方法</strong>なので、産後のデリケートな身体でも安心です。「矯正＝怖い・痛い」というイメージのある方こそ、一度体験してみてください。</p>
-      <figure class="ph ratio-4x3">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l2-3h8l2 3h3v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span>写真：骨盤矯正・楽トレの施術風景（後日差し替え）</span>
+      <figure class="ph ratio-4x3 is-photo">
+        <img src="images/kotsuban-shijutsu.jpg" alt="産後骨盤矯正の施術風景">
       </figure>
     </div>
 
     <div class="feature">
       <span class="f-label">理由 04</span>
-      <h3><em>小手指駅から徒歩8分・駐車場13台</em>。<br>ベビーカーでも車でも通いやすい</h3>
-      <p>西武池袋線「小手指駅」から徒歩8分。<strong>駐車場も13台完備</strong>しているので、お車での来院も安心です。赤ちゃんとのお出かけの負担を、できるだけ少なく通っていただけます。</p>
+      <h3><em>小手指駅から徒歩8分・駐車場完備</em>。<br>ベビーカーでも車でも通いやすい</h3>
+      <p>西武池袋線「小手指駅」から徒歩8分。<strong>駐車場も完備</strong>しているので、お車での来院も安心です。赤ちゃんとのお出かけの負担を、できるだけ少なく通っていただけます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 施術者紹介 ================= -->
+<section class="sec-staff">
+  <div class="inner">
+    <div class="sec-head">
+      <span class="en">Staff</span>
+      <h2>施術を担当する<br>女性施術者のご紹介</h2>
+    </div>
+    <div class="staff-card">
+      <img class="staff-photo" src="images/ikemoto.jpg" alt="女性施術者 池本久美波">
+      <div class="staff-body">
+        <p class="staff-role">女性施術者</p>
+        <p class="staff-name">池本 久美波<span class="kana">いけもと くみは</span></p>
+        <div class="staff-tags">
+          <span>7人の子を育てる母</span>
+          <span>夫婦で運営</span>
+          <span>産後ママに寄り添う</span>
+        </div>
+        <p class="staff-quote">「お母さんが元気だと、<wbr>家族みんなが元気になる」</p>
+        <p>私自身、7人の子どもを育てる母親です。妊娠中・産後・子育て中の身体のつらさや、思うように休めないもどかしさは、身をもって知っているつもりです。</p>
+        <p>だからこそ、当院では体を整えるだけでなく、<strong>元気に毎日を過ごせる体づくりや、ご自宅でできる方法をお伝えすること</strong>を大切にしています。ご夫婦で営む、小さなお子さま連れでも安心して通える整骨院です。どうぞ気軽にご相談ください。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -754,9 +794,8 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <span class="en">Access</span>
       <h2>アクセス</h2>
     </div>
-    <figure class="ph ratio-16x9 access-photo">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l2-3h8l2 3h3v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
-      <span>写真：外観・入口（後日差し替え）</span>
+    <figure class="ph ratio-16x9 access-photo is-photo">
+      <img src="images/gaikan.jpg" alt="おおば整骨院・整体院の外観">
     </figure>
     <div class="access-card">
       <h3>おおば整骨院・整体院</h3>
@@ -764,7 +803,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
         <dt>住所</dt>
         <dd>〒359-1141 埼玉県所沢市小手指町2-18-16 アンドレビル1F</dd>
         <dt>アクセス</dt>
-        <dd>西武池袋線「小手指駅」より徒歩8分／駐車場13台完備</dd>
+        <dd>西武池袋線「小手指駅」より徒歩8分／駐車場完備</dd>
         <dt>電話番号</dt>
         <dd>04-2921-6767</dd>
         <dt>受付時間</dt>
