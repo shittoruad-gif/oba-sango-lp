@@ -368,6 +368,16 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 @media(max-width:400px){
   .hero-badge{width:104px;height:104px;}
 }
+/* 小型スマホ(〜360px)で見出しが行末に1文字だけ落ちるのを防ぐ */
+@media(max-width:360px){
+  .hero-top{flex-direction:column;align-items:flex-start;gap:2px;}
+  .hero h1{font-size:20px;}
+  .sec-head h2{font-size:20px;}
+  .feature h3{font-size:16.5px;}
+  .sol-step h3{font-size:16px;}
+  .benefit-item h3{font-size:15px;}
+  .staff-name{font-size:21px;}
+}
 </style>
 </head>
 <body>
@@ -605,7 +615,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 
     <div class="feature feature-1">
       <span class="f-label">理由 01</span>
-      <h3><em>女性施術者が担当</em>だから、<br>デリケートな悩みも話しやすい</h3>
+      <h3><em>女性施術者が担当</em>だから、<br>デリケートな悩みも<wbr>話しやすい</h3>
       <p>当院には女性の施術者が在籍しており、<strong>産後骨盤矯正は基本的に女性施術者が担当</strong>します。骨盤まわりのお悩みなど、男性には話しにくいことも気兼ねなくご相談ください。実際に、当院の患者様の<strong>70%以上が女性</strong>。明るく清潔な院内で、女性が通いやすい環境を整えています。</p>
       <figure class="ph ratio-4x3 is-photo">
         <img src="images/josei-shijutsu.jpg" alt="女性施術者による施術の様子">
@@ -614,7 +624,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 
     <div class="feature">
       <span class="f-label">理由 02</span>
-      <h3>キッズスペース・ベビーベッド完備。<br><em>赤ちゃん連れで来られます</em></h3>
+      <h3>キッズスペース・ベビーベッド完備。<br><em>赤ちゃん連れで<wbr>来られます</em></h3>
       <p>「子どもを預けられないから通えない」という心配は要りません。キッズスペースに加え、<strong>待合室にはベビーベッドも設置</strong>。<strong>院内はベビーカーのまま入れます</strong>ので、赤ちゃんと一緒でも安心。完全予約制で待ち時間も少なく、周りに気兼ねなくご来院いただけます。</p>
       <div class="photo-duo">
         <figure class="ph ratio-4x3 is-photo">
@@ -628,7 +638,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 
     <div class="feature">
       <span class="f-label">理由 03</span>
-      <h3>バキバキしない、<em>からだにやさしい矯正</em>。<br>産後2ヶ月から受けられます</h3>
+      <h3>バキバキしない、<em>からだにやさしい矯正</em>。<br>産後2ヶ月から<wbr>受けられます</h3>
       <p>施術は身体にやさしいブロック矯正。<strong>強い刺激のないソフトな方法</strong>なので、産後のデリケートな身体でも安心です。「矯正＝怖い・痛い」というイメージのある方こそ、一度体験してみてください。</p>
       <figure class="ph ratio-4x3 is-photo">
         <img src="images/kotsuban-shijutsu.jpg" alt="産後骨盤矯正の施術風景">
@@ -637,7 +647,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 
     <div class="feature">
       <span class="f-label">理由 04</span>
-      <h3><em>小手指駅から徒歩8分・駐車場完備</em>。<br>ベビーカーでも車でも通いやすい</h3>
+      <h3><em>小手指駅から徒歩8分・駐車場完備</em>。<br>ベビーカーでも<wbr>車でも通いやすい</h3>
       <p>西武池袋線「小手指駅」から徒歩8分。<strong>駐車場も完備</strong>しているので、お車での来院も安心です。赤ちゃんとのお出かけの負担を、できるだけ少なく通っていただけます。</p>
     </div>
   </div>
