@@ -243,6 +243,8 @@ section{padding:72px 0;}
 .ph.ratio-4x3{aspect-ratio:4/3;}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .ph.is-photo{border:none;padding:0;background:#efe7de;}
+.photo-duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}
+.photo-duo .ph{margin:0;}
 .hero-photo{max-width:560px;margin:0 auto 28px;}
 .feature .ph{margin-top:18px;}
 .access-photo{margin-bottom:22px;}
@@ -374,8 +376,8 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
   ■ 掲載写真（2026-07-14 クライアント提供分を反映済み。images/ に保存）
   1. ヒーロー   hero-shijutsu.jpg   … 女性施術者(池本)の施術風景（16:9）
   2. 施術者紹介 ikemoto.jpg         … 池本久美波さん＋赤ちゃん
-  3. 特徴01     josei-shijutsu.jpg  … 女性施術者の施術（4:3）
-  4. 特徴02     kids-space.jpg      … キッズスペース・ベビーベッド（4:3）
+  3. 特徴01     josei-shijutsu.jpg  … 女性施術者の施術（#22・4:3）
+  4. 特徴02     kids-space.jpg ＋ baby-bed.jpg … キッズスペース＋ベビーベッド（2枚並び）
   5. 特徴03     kotsuban-shijutsu.jpg … 骨盤矯正の施術風景（4:3）
   6. アクセス   gaikan.jpg          … 外観・駐車場（16:9）
   差し替える場合は images/ の同名ファイルを置き換える。元の全42枚は Downloads/大庭先生/。
@@ -614,9 +616,14 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <span class="f-label">理由 02</span>
       <h3>キッズスペース・ベビーベッド完備。<br><em>赤ちゃん連れで来られます</em></h3>
       <p>「子どもを預けられないから通えない」という心配は要りません。キッズスペースに加え、<strong>待合室にはベビーベッドも設置</strong>。<strong>院内はベビーカーのまま入れます</strong>ので、赤ちゃんと一緒でも安心。完全予約制で待ち時間も少なく、周りに気兼ねなくご来院いただけます。</p>
-      <figure class="ph ratio-4x3 is-photo">
-        <img src="images/kids-space.jpg" alt="キッズスペースとベビーベッド">
-      </figure>
+      <div class="photo-duo">
+        <figure class="ph ratio-4x3 is-photo">
+          <img src="images/kids-space.jpg" alt="キッズスペース">
+        </figure>
+        <figure class="ph ratio-4x3 is-photo">
+          <img src="images/baby-bed.jpg" alt="ベビーベッドで過ごす赤ちゃん">
+        </figure>
+      </div>
     </div>
 
     <div class="feature">
