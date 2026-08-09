@@ -5,12 +5,14 @@ COPY index.html /usr/share/nginx/html/
 COPY images/ /usr/share/nginx/html/images/
 
 # IPv4/IPv6 両方で待受。ヘルスチェック互換のため [::]:80 も listen
+# ボタンのクリック計測用エンドポイント(/t/…)。Cookie・外部送信なし、アクセスログで集計する。
 RUN printf 'server {\n\
   listen 80;\n\
   listen [::]:80;\n\
   server_name _;\n\
   root /usr/share/nginx/html;\n\
   index index.html;\n\
+  location /t/ { return 204; }\n\
   location / { try_files $uri $uri/ /index.html; }\n\
   add_header X-Robots-Tag "noindex, nofollow" always;\n\
 }\n' > /etc/nginx/conf.d/default.conf

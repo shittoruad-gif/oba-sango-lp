@@ -845,5 +845,23 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
   <a class="sticky-tel" href="tel:0429216767">電話する<span class="s">04-2921-6767</span></a>
 </nav>
 
+<!-- クリック計測（Cookie・外部送信なし。同一サーバーの/t/へ小さな信号を送りログで集計） -->
+<script>
+(function(){
+  function beacon(label){
+    var url = '/t/' + label;
+    try { if (navigator.sendBeacon) { navigator.sendBeacon(url); return; } } catch(e){}
+    try { new Image().src = url + '?' + Date.now(); } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var h = (a.getAttribute('href') || '').toLowerCase();
+    if (h.indexOf('line.me') > -1) beacon('line');
+    else if (h.indexOf('tel:') === 0) beacon('tel');
+  }, true);
+})();
+</script>
+
 </body>
 </html>
