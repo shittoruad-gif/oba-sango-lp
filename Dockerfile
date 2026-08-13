@@ -12,6 +12,7 @@ RUN printf 'server {\n\
   server_name _;\n\
   root /usr/share/nginx/html;\n\
   index index.html;\n\
+  location = /go/line { return 302 https://line.me/ti/p/qWvbkkigAU; }\n\
   location /t/ { return 204; }\n\
   location / { try_files $uri $uri/ /index.html; }\n\
   add_header X-Robots-Tag "noindex, nofollow" always;\n\
