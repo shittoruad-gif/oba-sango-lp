@@ -69,6 +69,8 @@ section{padding:72px 0;}
 .btn-tel .num{font-size:20px;letter-spacing:.04em;}
 .btn svg{flex-shrink:0;}
 .cta-note{text-align:center;font-size:12.5px;color:var(--brown-light);margin-top:12px;}
+.cta-soft{text-align:center;font-size:12.5px;color:var(--brown-light);margin:10px 0 22px;}
+.mini-cta{max-width:440px;margin:30px auto 0;}
 .line-guide{max-width:440px;margin:16px auto 0;background:#f2fbf4;border:1.5px solid #bce8c8;border-radius:16px;padding:18px 22px;}
 .line-guide-ttl{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;color:#2f8f4e;text-align:center;margin-bottom:12px;}
 .line-guide ol{margin:0;padding:0;list-style:none;counter-reset:lg;}
@@ -358,7 +360,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
   font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13.5px;line-height:1.3;
 }
 .sticky-cta a .s{font-size:10px;font-weight:500;opacity:.9;}
-.sticky-line{background:var(--line-green);}
+.sticky-line{background:var(--line-green);flex:2;font-size:15px;}
 .sticky-web{background:var(--rose);}
 .sticky-tel{background:var(--brown);}
 
@@ -404,7 +406,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <span class="area">所沢市小手指駅 徒歩8分</span>
     </div>
     <div class="hero-body">
-      <span class="hero-tag">産後2ヶ月からOK｜女性施術者による産後骨盤矯正</span>
+      <span class="hero-tag">産後2ヶ月からOK・女性施術者が担当</span>
       <h1>
         抱っこのたびに腰がつらい。<br>
         産前のズボンが入らない。<br>
@@ -412,17 +414,9 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
         <span class="marker">ケアしてみませんか。</span>
       </h1>
       <p class="sub-copy">
-        おおば整骨院・整体院の産後骨盤矯正は、<strong>女性施術者が担当</strong>。<br>
-        からだにやさしい手技だから、<br>産後のデリケートな身体でも、安心してお受けいただけます。
+        産後骨盤矯正は<strong>女性施術者が担当</strong>。<br>
+        からだにやさしい手技で、産後のデリケートな身体も安心です。
       </p>
-      <figure class="ph ratio-16x9 hero-photo is-photo">
-        <img src="images/hero-shijutsu.jpg" alt="女性施術者による産後骨盤矯正の施術風景">
-      </figure>
-      <div class="hero-badges">
-        <div class="hero-badge"><span class="small">基本は</span><span class="big">女性施術者<br>が担当</span></div>
-        <div class="hero-badge"><span class="small">キッズスペース</span><span class="big">お子様連れ<br>OK</span></div>
-        <div class="hero-badge"><span class="small">患者様の</span><span class="big"><span class="num">70</span>%以上<br>が女性</span></div>
-      </div>
       <div class="price-box">
         <div class="label">産後骨盤矯正 初回お試し</div>
         <div class="price"><span class="now">5,500</span><span class="yen">円</span><span class="cap-tax">（税込）</span></div>
@@ -431,11 +425,20 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <div class="cta-buttons">
         <a class="btn btn-line" href="/go/line">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.7 2 10.26c0 4.08 3.55 7.5 8.34 8.15.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .88.55 1.08-.46 5.84-3.44 7.97-5.89C21.42 13.7 22 12.06 22 10.26 22 5.7 17.52 2 12 2z"/></svg>
-          <span>LINEで予約する<span class="sub">24時間受付・友だち追加して送信</span></span>
+          <span>LINEで予約・相談する<span class="sub">「産後」と送るだけ・24時間受付</span></span>
         </a>
         <a class="btn btn-tel" href="tel:0429216767">
           <span><span class="sub">お電話でのご予約はこちら</span><span class="num">04-2921-6767</span></span>
         </a>
+      </div>
+      <p class="cta-soft">相談だけでも大丈夫です。無理な勧誘は行いません。</p>
+      <figure class="ph ratio-16x9 hero-photo is-photo">
+        <img src="images/hero-shijutsu.jpg" alt="女性施術者による産後骨盤矯正の施術風景" fetchpriority="high">
+      </figure>
+      <div class="hero-badges">
+        <div class="hero-badge"><span class="small">基本は</span><span class="big">女性施術者<br>が担当</span></div>
+        <div class="hero-badge"><span class="small">キッズスペース</span><span class="big">お子様連れ<br>OK</span></div>
+        <div class="hero-badge"><span class="small">患者様の</span><span class="big"><span class="num">70</span>%以上<br>が女性</span></div>
       </div>
       <div class="line-guide">
         <p class="line-guide-ttl">LINEでのご予約は、かんたん2ステップ</p>
@@ -468,6 +471,12 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       ひとつでも当てはまったら、<br>
       それは<span class="accent">がんばりが足りないせいではなく、<br>出産で変化した骨盤からのサイン</span>です。
     </p>
+    <div class="mini-cta">
+      <a class="btn btn-line" href="/go/line">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.7 2 10.26c0 4.08 3.55 7.5 8.34 8.15.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .88.55 1.08-.46 5.84-3.44 7.97-5.89C21.42 13.7 22 12.06 22 10.26 22 5.7 17.52 2 12 2z"/></svg>
+        <span>まずはLINEで相談する<span class="sub">「産後」と送るだけ・相談だけでもOK</span></span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -599,7 +608,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
     <div class="cta-buttons">
       <a class="btn btn-line" href="/go/line">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.7 2 10.26c0 4.08 3.55 7.5 8.34 8.15.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .88.55 1.08-.46 5.84-3.44 7.97-5.89C21.42 13.7 22 12.06 22 10.26 22 5.7 17.52 2 12 2z"/></svg>
-        <span>LINEで予約する<span class="sub">友だち追加して「産後」と送信</span></span>
+        <span>LINEで予約・相談する<span class="sub">友だち追加して「産後」と送るだけ</span></span>
       </a>
       <a class="btn btn-tel" href="tel:0429216767">
         <span><span class="sub">お電話でのご予約</span><span class="num">04-2921-6767</span></span>
@@ -621,7 +630,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <h3><em>女性施術者が担当</em>だから、<br>デリケートな悩みも<wbr>話しやすい</h3>
       <p>当院には女性の施術者が在籍しており、<strong>産後骨盤矯正は基本的に女性施術者が担当</strong>します。<br class="br-sp">骨盤まわりのお悩みなど、男性には話しにくいことも気兼ねなくご相談ください。<br class="br-sp">実際に、当院の患者様の<strong>70%以上が女性</strong>。<br class="br-sp">明るく清潔な院内で、女性が通いやすい環境を整えています。</p>
       <figure class="ph ratio-4x3 is-photo">
-        <img src="images/josei-shijutsu.jpg" alt="女性施術者による施術の様子">
+        <img src="images/josei-shijutsu.jpg" loading="lazy" decoding="async" alt="女性施術者による施術の様子">
       </figure>
     </div>
 
@@ -631,10 +640,10 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <p>「子どもを預けられないから通えない」という心配は要りません。<br class="br-sp"><strong>キッズスペースにはベビーベッドも設置</strong>。<br class="br-sp"><strong>院内はベビーカーのまま入れます</strong>ので、赤ちゃんと一緒でも安心。<br class="br-sp">完全予約制で待ち時間も少なく、周りに気兼ねなくご来院いただけます。</p>
       <div class="photo-duo">
         <figure class="ph ratio-4x3 is-photo">
-          <img src="images/kids-space.jpg" alt="キッズスペース">
+          <img src="images/kids-space.jpg" loading="lazy" decoding="async" alt="キッズスペース">
         </figure>
         <figure class="ph ratio-4x3 is-photo">
-          <img src="images/baby-bed.jpg" alt="ベビーベッドで過ごす赤ちゃん">
+          <img src="images/baby-bed.jpg" loading="lazy" decoding="async" alt="ベビーベッドで過ごす赤ちゃん">
         </figure>
       </div>
     </div>
@@ -644,7 +653,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <h3><em>からだにやさしい</em>産後の骨盤矯正。<br>産後2ヶ月から<wbr>受けられます</h3>
       <p>施術は身体にやさしい手技が中心。<br class="br-sp"><strong>強い刺激のないソフトな方法</strong>なので、産後のデリケートな身体でも安心です。<br class="br-sp">「矯正＝怖い・痛い」というイメージのある方こそ、一度体験してみてください。</p>
       <figure class="ph ratio-4x3 is-photo">
-        <img src="images/kotsuban-shijutsu.jpg" alt="産後骨盤矯正の施術風景">
+        <img src="images/kotsuban-shijutsu.jpg" loading="lazy" decoding="async" alt="産後骨盤矯正の施術風景">
       </figure>
     </div>
 
@@ -664,7 +673,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <h2>施術を担当する<br>女性施術者のご紹介</h2>
     </div>
     <div class="staff-card">
-      <img class="staff-photo" src="images/ikemoto.jpg" alt="女性施術者 大庭久美波">
+      <img class="staff-photo" src="images/ikemoto.jpg" loading="lazy" decoding="async" alt="女性施術者 大庭久美波">
       <div class="staff-body">
         <p class="staff-role">女性施術者</p>
         <p class="staff-name">大庭 久美波<span class="kana">おおば くみは</span></p>
@@ -784,7 +793,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
     <div class="cta-buttons">
       <a class="btn btn-line" href="/go/line">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.7 2 10.26c0 4.08 3.55 7.5 8.34 8.15.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .88.55 1.08-.46 5.84-3.44 7.97-5.89C21.42 13.7 22 12.06 22 10.26 22 5.7 17.52 2 12 2z"/></svg>
-        <span>LINEで予約する<span class="sub">24時間受付・友だち追加して送信</span></span>
+        <span>LINEで予約・相談する<span class="sub">「産後」と送るだけ・24時間受付</span></span>
       </a>
       <a class="btn btn-tel" href="tel:0429216767">
         <span><span class="sub">お電話でのご予約はこちら</span><span class="num">04-2921-6767</span></span>
@@ -815,7 +824,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
       <h2>アクセス</h2>
     </div>
     <figure class="ph ratio-16x9 access-photo is-photo">
-      <img src="images/gaikan.jpg" alt="おおば整骨院・整体院の外観">
+      <img src="images/gaikan.jpg" loading="lazy" decoding="async" alt="おおば整骨院・整体院の外観">
     </figure>
     <div class="access-card">
       <h3>おおば整骨院・整体院</h3>
@@ -841,7 +850,7 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
 
 <!-- ================= 追従CTAバー ================= -->
 <nav class="sticky-cta">
-  <a class="sticky-line" href="/go/line">LINE予約<span class="s">24時間受付</span></a>
+  <a class="sticky-line" href="/go/line">LINEで予約・相談<span class="s">「産後」と送るだけ・24時間受付</span></a>
   <a class="sticky-tel" href="tel:0429216767">電話する<span class="s">04-2921-6767</span></a>
 </nav>
 
@@ -860,6 +869,19 @@ footer .disclaimer{max-width:620px;margin:0 auto 16px;font-size:11px;color:#cbbc
     if (h.indexOf('line.me') > -1) beacon('line');
     else if (h.indexOf('tel:') === 0) beacon('tel');
   }, true);
+  // スクロール到達率（25/50/75/100% 各1回。離脱位置の把握用）
+  var marks = {25:false, 50:false, 75:false, 100:false};
+  function onScroll(){
+    var d = document.documentElement;
+    var max = d.scrollHeight - window.innerHeight;
+    if (max <= 0) return;
+    var pct = (window.scrollY / max) * 100;
+    [25,50,75,100].forEach(function(m){
+      if (!marks[m] && pct >= m - 0.5) { marks[m] = true; beacon('s' + m); }
+    });
+    if (marks[100]) window.removeEventListener('scroll', onScroll);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
 })();
 </script>
 
